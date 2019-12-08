@@ -8,6 +8,24 @@
 #define ADC_CONFIG_REGISTER
 
 
-STATUS adc_init();
-float32_t adc_read();
+#ifndef ADC_H
+#define ADC_H
+
+#include <stdio.h>
+#include <avr/io.h>
+#include <util/delay.h>
+#include <avr.interrupt.h>
+
+#define F_CPU 80000000UL
+#define FOSC 80000000
+#define BAUD 9600
+#define MYUBRR FOSC/16/BAUD -1 //9600 baudrate
+
+  float32_t adc_read();
+  void adc_init();
+  void USART_init();
+  void USART_Transmit(unsigned char data)
+  void Usart_print(char *StringofCharacters);
+
+#endif
 
