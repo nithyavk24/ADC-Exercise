@@ -11,7 +11,8 @@
 /* assume 3 digits of decimal resolution */
 /* bonus points if you fill in the details of adcRead() with a mock hardware driver in adc.c and adc.h*/
 
-
+/*  for the code i have considered using Atmega 328p for ADC conversion to a 10 bit value and UART communication with the same
+all registers are set considering the Atmega 328p datasheet */
 
 float32_t my_array[100];
 char buffer[4];
